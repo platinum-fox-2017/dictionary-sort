@@ -17,16 +17,12 @@ function dictionarySort(arr) {
                 arr[j]   = arr[i];
                 arr[i]   = temp;
             } else if (arr[i][0] == arr[j][0]) {
-                var winner = sameFirstAlphabet(arr[i][0],arr[j][0]);
-                if (winner == arr[i][0]) {
+                var winner = sameFirstAlphabet(arr[i],arr[j]);
+                if (winner == arr[i]) {
                     var temp = arr[j];
                     arr[j]   = arr[i];
                     arr[i]   = temp;
-                } else {
-                    var temp = arr[i];
-                    arr[i]   = arr[j];
-                    arr[j]   = temp;
-                }
+                } 
             }
         }
     }
