@@ -19,7 +19,12 @@ function dictionary_sort(arr) {
       arrSorted.push(minText)
       arr.splice(iMin, 1)
   }
-  return arrSorted
+  var text =''
+  for (var i=0; i<arrSorted.length; i++) {
+    text += arrSorted[i]
+    text += ', '
+  }
+  return text
 }
 
 console.log(dictionary_sort(['makan','duduk','tidur','terbang']));
