@@ -10,7 +10,6 @@ for(var j=0;j<input.length;j++)
         {
           if(input[i]<input[temp])
               {
-               // min=input[i];
                 temp=i;
               }
 
@@ -21,7 +20,7 @@ for(var j=0;j<input.length;j++)
     input[temp]=arr;
 
   }
-      return input;
+      return input.join();
 }
 
 
