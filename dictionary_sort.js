@@ -1,4 +1,47 @@
-const readline = require('readline');
-// your code here to initialize the program and take user input
+/*
+contoh 1
 
-module.exports = Dictionary
+input: 
+var arrOfWord = ['makan', 'duduk', 'tidur', 'terbang']
+
+output:
+duduk,makan,terbang,tidur
+
+
+contoh 2
+
+input:
+var arrOfWord = ['anggi','angga', 'ani','adi']
+
+output:
+angga,anggi,adi,ani
+
+*/
+
+
+// Release 0
+var arrOfWord1 = ['makan', 'duduk', 'tidur', 'terbang'];
+var arrOfWord2 = ['anggi','angga', 'ani','adi'];
+
+
+function dictionary(arr){
+    var temp;
+    var min;
+  
+    for (var i = 0; i < arr.length-1; i++){
+      min = i;
+      for (var j = i+1; j < arr.length; j++){
+        if (arr[min] > arr[j]){
+          min = j;
+        }
+      }
+      temp = arr[i];
+      arr[i] = arr[min];
+      arr[min] = temp;
+    }
+
+    return arr.join(',');
+}
+
+console.log(dictionary(arrOfWord1))
+console.log(dictionary(arrOfWord2))
