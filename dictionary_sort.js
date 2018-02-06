@@ -13,7 +13,7 @@ function dictSort(array){
     array.splice(smallestIdx, 1);
     arrLowerCase.splice(smallestIdx, 1);
   }
-  return sortedArr;
+  return sortedArr.join(',');
 }
 
 
@@ -33,6 +33,8 @@ function findMin(array){
     }
 }
 
-var array = [ 'Makan', 'makalah', 'tIdur', 'Terbang' ];
-console.log(dictSort(array));
+
+console.log(dictSort([ 'Makan', 'makalah', 'tIdur', 'Terbang' ]));
+console.log(dictSort([ 'makan', 'duduk', 'terbang' ]));
+console.log(dictSort([ 'anggi', 'angga', 'ani', 'adi' ]));
 module.exports = Dictionary
