@@ -4,10 +4,11 @@ const readline = require('readline');
 var arrOfWord1=['makan','duduk','tidur','terbang'];
 var arrOfWord2=['anggi','angga','ani','adi'];
 
-function wordSort(arr) {
+
+function dictionarySort(arr) {
     for(var i=1; i<arr.length; i++) {
         for(var j=0; j<i; j++) {
-          if(arr[i]<arr[j]) {
+          if(arr[i].toLowerCase()<arr[j].toLowerCase()) {
             var temp=arr[j];
             arr[j]=arr[i];
             arr[i]=temp;
@@ -18,6 +19,8 @@ function wordSort(arr) {
     return arr.join(',');
 }
 
+    
+
 function min(arr) {
     var min=arr[0]
     for(var i in arr) {
@@ -25,6 +28,7 @@ function min(arr) {
     }
     console.log(min);
 }
-console.log(wordSort(arrOfWord1));
-console.log(wordSort(arrOfWord2));
+console.log(dictionarySort(arrOfWord1));
+console.log(dictionarySort(arrOfWord2));
+console.log(dictionarySort(['makan','DuDuK','tIdUr','Terbang']));
 
