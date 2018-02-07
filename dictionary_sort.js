@@ -7,20 +7,16 @@ function Dictionary(arr) {
 
     while (arr.length != 0) {
         var angkaMin = arr[0];    
+        var indexMin = 0;
+
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] < angkaMin) {
                 angkaMin = arr[i];
+                indexMin = i;
             }
         }
         hasilSort.push(angkaMin);
         // console.log(angkaMin); // duduk
-
-        var indexMin = 0;
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] == angkaMin) {
-                indexMin = i;
-            }
-        }        
         // console.log(indexMin); // 1
 
         arr.splice(indexMin, 1);
