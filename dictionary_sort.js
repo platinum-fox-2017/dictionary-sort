@@ -6,7 +6,7 @@ function dictionarySort(arr) {
   for(var j = 0; j < arr.length-1; j++){
     for (var i = 0; i < arr.length-1-j; i++) {
       // Using check function actually unnecessary, because I think JS library already understand how to sort a string, not like others more traditional programming language
-      if (check(arr[i], arr[i+1]) == false) {
+      if (check(arr[i].toLowerCase(), arr[i+1].toLowerCase()) == false) {
         var temp = arr[i];
         arr[i] = arr[i+1];
         arr[i+1] = temp;
@@ -35,6 +35,7 @@ function check(input1, input2) {
 
 
 console.log(dictionarySort(['makan', 'duduk', 'tidur', 'terbang']));
+console.log(dictionarySort(['makan','DuDuK','tIdUr','Terbang']));
 console.log(dictionarySort(['anggi', 'angga', 'ani', 'adi']));
 
 
