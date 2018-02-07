@@ -22,6 +22,7 @@ angga,anggi,adi,ani
 // Release 0
 var arrOfWord1 = ['makan', 'duduk', 'tidur', 'terbang'];
 var arrOfWord2 = ['anggi','angga', 'ani','adi'];
+var arrOfWord3 = ['makan','DuDuK','tIdUr','Terbang']
 
 
 function dictionary(arr){
@@ -31,7 +32,7 @@ function dictionary(arr){
     for (var i = 0; i < arr.length-1; i++){
       min = i;
       for (var j = i+1; j < arr.length; j++){
-        if (arr[min] > arr[j]){
+        if (arr[min].toLowerCase() > arr[j].toLowerCase()){
           min = j;
         }
       }
@@ -45,3 +46,4 @@ function dictionary(arr){
 
 console.log(dictionary(arrOfWord1))
 console.log(dictionary(arrOfWord2))
+console.log(dictionary(arrOfWord3))
