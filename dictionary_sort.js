@@ -1,12 +1,22 @@
 const readline = require('readline');
 
-var nama = ['kevin','ketek','kanu','kenny']
+var nama = [ 'duDuK', 'Terbang', 'makan', 'tIdUr' ]
 
 
 
 function ownSort(arr) {
   
-  let nameOlah = arr
+  let newArr = []
+  let oldIndex = []
+
+  for(let i = 0; i < arr.length; i++){
+    
+    arr[i] += i
+    newArr.push(arr[i].toLowerCase())
+  }
+  console.log(newArr)
+  
+  let nameOlah = newArr
 
   for(let i = 0;i < nameOlah.length; i++){
     let nilaiMinimum = nameOlah[i]
@@ -28,9 +38,26 @@ function ownSort(arr) {
     }
   }
 
-  return nameOlah
+  let hasil = []
+
+  for(let i = 0 ; i < nameOlah.length;i++){
+    let number = nameOlah[i].length - 1
+    let numb = Number(nameOlah[i][number])
+    hasil.push(arr[numb])
+  }
+
+  let newHasil = []
+  for(let i = 0; i < hasil.length;i++){
+    let word = ""
+    for(let j = 0; j < hasil[i].length - 1;j++){
+      word += hasil[i][j]
+    }
+
+    newHasil.push(word)
+  }
+  return newHasil
+  // return nameOlah
 }
 
 console.log(ownSort(nama))
 
-module.exports = Dictionary
